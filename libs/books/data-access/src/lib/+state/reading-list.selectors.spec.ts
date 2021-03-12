@@ -1,7 +1,7 @@
 import { initialState, readingListAdapter } from './reading-list.reducer';
 import {
   booksAdapter,
-  initialState as booksInitialState
+  bookInitialState
 } from './books.reducer';
 import * as ToReadSelectors from './reading-list.selectors';
 import { createBook, createReadingListItem } from '@tmo/shared/testing';
@@ -14,7 +14,7 @@ describe('ReadingList Selectors', () => {
       books: booksAdapter.addMany(
         [createBook('A'), createBook('B'), createBook('C')],
         {
-          ...booksInitialState,
+          ...bookInitialState,
           error: 'Unknown error',
           loaded: true
         }

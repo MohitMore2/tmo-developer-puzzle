@@ -3,10 +3,10 @@ import {
   BOOKS_FEATURE_KEY,
   booksAdapter,
   BooksPartialState,
-  State
+  BookState
 } from './books.reducer';
 
-export const getBooksState = createFeatureSelector<BooksPartialState, State>(
+export const getBooksState = createFeatureSelector<BooksPartialState, BookState>(
   BOOKS_FEATURE_KEY
 );
 
@@ -14,12 +14,12 @@ const { selectAll } = booksAdapter.getSelectors();
 
 export const getBooksLoaded = createSelector(
   getBooksState,
-  (state: State) => state.loaded
+  (state: BookState) => state.loaded
 );
 
 export const getBooksError = createSelector(
   getBooksState,
-  (state: State) => state.error
+  (state: BookState) => state.error
 );
 
 export const getBooks = createSelector(getBooksState, selectAll);

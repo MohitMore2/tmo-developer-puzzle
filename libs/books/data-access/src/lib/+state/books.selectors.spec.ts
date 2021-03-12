@@ -1,4 +1,4 @@
-import { booksAdapter, initialState } from './books.reducer';
+import { booksAdapter, bookInitialState } from './books.reducer';
 import * as BooksSelectors from './books.selectors';
 import { createBook } from '@tmo/shared/testing';
 
@@ -10,7 +10,7 @@ describe('Books Selectors', () => {
       books: booksAdapter.addMany(
         [createBook('A'), createBook('B'), createBook('C')],
         {
-          ...initialState,
+          ...bookInitialState,
           error: 'Unknown error',
           loaded: true
         }

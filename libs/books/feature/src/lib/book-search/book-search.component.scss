@@ -60,6 +60,16 @@ form {
     }
   }
 }
+.empty {
+  button{
+    cursor: pointer;
+    color: $pink-accent;
+    padding: 0;
+    margin: 0;
+    background-color: $white;
+    border: 0;
+  }
+}
 
 .empty {
   display: flex;
@@ -68,5 +78,19 @@ form {
   justify-content: center;
   min-height: 50vh;
   font-size: 1.5rem;
-  color: $gray40;
+  color: $gray60;
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.5rem;
+  color: $error-color;
+  background: $gray20;
+
+  p {
+    font-size: smaller;
+    font-weight: 500;
+  }
 }

@@ -38,6 +38,8 @@ export const getAllBooks = createSelector<
   return books.map(b => ({ ...b, isAdded: Boolean(entities[b.id]) }));
 });
 
+export const getReadingListError = createSelector(getReadingListState,(state: State) => state.error);
+
 export const getReadingList = createSelector(getReadingListState, selectAll);
 
 export const getTotalUnread = createSelector(getReadingListState, selectTotal);

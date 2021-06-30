@@ -10,7 +10,7 @@ import { createReadingListItem } from '@tmo/shared/testing';
 describe('Books Reducer', () => {
   describe('valid Books actions', () => {
     let state: State;
-    const error='';
+    const error='error';
 
     beforeEach(() => {
       state = readingListAdapter.setAll(
@@ -34,7 +34,7 @@ describe('Books Reducer', () => {
     });
 
     it('failedAddToReadingList should return error of API failure on adding book', () => {
-      const action = ReadingListActions.failedAddToReadingList({error});
+      const action = ReadingListActions.failedAddToReadingList({error:'error'});
 
       const result: State = reducer(state, action);
 
@@ -42,11 +42,11 @@ describe('Books Reducer', () => {
     });
 
     it('failedRemoveFromReadingList should return error of API failure on removing book', () => {
-      const action = ReadingListActions.failedRemoveFromReadingList({error});
+      const action = ReadingListActions.failedRemoveFromReadingList({error:'error'});
 
       const result: State = reducer(state, action);
 
-      expect(result.error).toEqual(error)
+      expect(result.error).toEqual(error);
     });
   });
 

@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatBadgeModule } from '@angular/material/badge';
+import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { TotalCountComponent } from './total-count/total-count.component';
 import { ReadingListComponent } from './reading-list/reading-list.component';
@@ -25,6 +26,7 @@ const EXPORTS = [
     MatBadgeModule,
     MatIconModule,
     MatInputModule,
+    MatTooltipModule,
     MatSnackBarModule,
     FormsModule,
     ReactiveFormsModule,
